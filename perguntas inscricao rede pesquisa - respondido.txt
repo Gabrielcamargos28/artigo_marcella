@@ -1,0 +1,112 @@
+perguntas do formulário do rede  nacional 
+
+1 - Características 
+
+População alvo:
+
+Tamanho da amostra:
+
+Tipo de dados: Primario ou secundário
+
+Área de conhecimento: Acho que  seria Ciências da saúde
+
+Abordagem da pesquisaa Qualitativa, quantitativa ou quanti-qualitativa
+
+Delineamento do estudo:  Caso controle, coorte, estudo de caso, outros ou transversal
+
+Tipo de estudo: Ciências Sociais e Humanas e Aplicadas em Saude, Desenvolvimento/Avaliação, experimental/Clinico, infraestrutura, observacional/epidemiológico, outros, pre-clinico
+
+CID:
+
+É estudo multicêntrico? 
+
+É projeto com co-participação? *
+
+
+2 - informações financeiras 
+
+Tipo de fomento: *
+
+Instituição de fomento: *
+
+Bolsas (R$): *
+
+Recurso de custeio (R$): *
+
+Recursos de capital (R$): *
+
+Recurso total do projeto (R$): *
+
+também é preciso uma planilha orçamentaria
+
+
+
+
+
+
+
+
+
+----------------------------------------------
+### 1 - Características do Projeto
+
+  • População alvo:
+  │ Superfícies inanimadas de contato indireto e uso coletivo (cortinas divisórias de leito, grades de cama, suportes
+  │ de soro e painéis de controle de bombas de infusão) nas enfermarias adultas do Hospital de Clínicas da UFU (HC-
+  │ UFU). Observação: O estudo é in vitro/ambiental e não coleta dados ou material biológico de seres humanos.
+
+  • Tamanho da amostra:
+  │ 100 amostras (sendo 25 swabs coletados de cada uma das quatro superfícies selecionadas).
+
+  • Tipo de dados:
+  │ Primário (visto que serão gerados novos dados a partir de coletas e ensaios laboratoriais próprios, e não de
+  │ bancos de dados pré-existentes ou prontuários).
+
+  • Área de conhecimento:
+  │ Ciências da Saúde (Medicina / Doenças Infecciosas e Parasitárias).
+
+  • Abordagem da pesquisa:
+  │ Quantitativa (visto que analisa frequências, taxas de contaminação bacteriana e diâmetros de halos de inibição em
+  │ milímetros).
+
+  • Delineamento do estudo:
+  │ Transversal (ou seccional, pois a coleta de dados microbiológicos de cada leito representa um único ponto no
+  │ tempo).
+
+  • Tipo de estudo:
+  │ Observacional/epidemiológico (ou "Outros", especificando "Vigilância microbiológica de superfícies in vitro").
+
+  • CID (Classificação Internacional de Doenças):
+  │ Não aplicável (estudo estritamente ambiental). Caso o sistema do formulário exija obrigatoriamente um código de
+  │ CID para avançar, preencha com Y95 (Condição nosocomial / Relacionada à assistência à saúde).
+
+  • É estudo multicêntrico?
+  │ Não (executado exclusivamente no HC-UFU).
+
+  • É projeto com co-participação?
+  │ Não (desenvolvido e executado de forma independente pela UFU/HC-UFU).
+
+  ──────
+  ### 2 - Informações Financeiras
+
+  • Tipo de fomento:
+  │ Bolsa e Custeio
+
+  • Instituição de fomento:
+  │ Empresa Brasileira de Serviços Hospitalares (EBSERH) em parceria com o CNPq.
+
+  • Bolsas (R$):
+  │ R\$ 8.400,00 (refere-se a 1 cota de bolsa de Iniciação Científica no valor mensal de R\$ 700,00 durante os 12
+  │ meses de vigência do edital).
+
+  • Recurso de custeio (R$):
+  │ R\$ 4.500,00 (refere-se aos materiais de consumo laboratorial para cultivo, identificação e antibiogramas das
+  │ bactérias).
+
+  • Recursos de capital (R$):
+  │ R\$ 0,00 (não há aquisição de equipamentos duráveis como computadores, autoclaves ou estufas, pois o laboratório
+  │ de microbiologia do HC-UFU já dispõe da infraestrutura de suporte).
+
+  • Recurso total do projeto (R$):
+  │ R\$ 12.900,00 (soma dos recursos de Bolsa e Custeio: R\$ 8.400,00 + R\$ 4.500,00)
+

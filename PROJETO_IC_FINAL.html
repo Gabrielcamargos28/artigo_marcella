@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Iniciação Científica - PIC/HU Brasil 2026-2027</title>
+    <style>
+        /* ABNT Print and Page Layout Settings */
+        @page {
+            size: A4;
+            margin: 3cm 2cm 2cm 3cm; /* Margens ABNT: Superior 3cm, Direita 2cm, Inferior 2cm, Esquerda 3cm */
+        }
+        
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #000000;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+        }
+
+        /* Screen Preview Styling */
+        @media screen {
+            body {
+                background-color: #e0e0e0;
+                padding: 20px;
+            }
+            .page-container {
+                background-color: #ffffff;
+                width: 16cm; /* 21cm (A4 width) - 5cm (margins) */
+                margin: 0 auto;
+                padding: 3cm 2cm 2cm 3cm;
+                box-shadow: 0 0 10px rgba(0,0,0,0.15);
+                min-height: 29.7cm;
+            }
+            .page-break-before {
+                border-top: 1px dashed #cccccc;
+                margin-top: 40px;
+                padding-top: 40px;
+            }
+        }
+
+        /* Print Specific Styling */
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .page-container {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .page-break-before {
+                page-break-before: always;
+            }
+        }
+
+        /* Typography & Spacing */
+        h1 {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 18pt;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+            margin-top: 24pt;
+            margin-bottom: 12pt;
+            line-height: 1.5;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: left;
+            margin-top: 18pt;
+            margin-bottom: 6pt;
+            line-height: 1.5;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 6pt;
+            text-indent: 1.5cm; /* Recuo padrão de parágrafo ABNT */
+            text-align: justify;
+        }
+
+        /* Paragraphs that should not have text indentation */
+        .no-indent, p.no-indent, td p, th p, li p, .bib-entry {
+            text-indent: 0 !important;
+        }
+
+        /* Lists formatting */
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 6pt;
+            padding-left: 1.5cm;
+        }
+
+        li {
+            margin-bottom: 4pt;
+            text-align: justify;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12pt;
+            margin-bottom: 12pt;
+            font-size: 10pt; /* Tabelas usam fonte menor em ABNT */
+            line-height: 1.3;
+            page-break-inside: avoid;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 6px 8px;
+            vertical-align: middle;
+        }
+
+        th {
+            font-weight: bold;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        /* Bibliografia ABNT alignment */
+        .bib-entry {
+            margin-bottom: 12pt;
+            padding-left: 0;
+            text-align: left;
+            line-height: 1.3;
+        }
+
+        /* Summary index formatting */
+        .sumario-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 12pt;
+        }
+
+        .sumario-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6pt;
+            font-weight: bold;
+        }
+
+        .sumario-subitem {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4pt;
+            padding-left: 0.75cm;
+            font-weight: normal;
+        }
+
+        .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #000000;
+            margin: 0 10px 4px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- Capa / Cabeçalho Institucional -->
+    <div class="center bold no-indent" style="margin-bottom: 4cm; text-transform: uppercase;">
+        Universidade Federal [ANONIMIZADA]<br>
+        Hospital Universitário [ANONIMIZADO]<br>
+        Edital N° 01/2026 – HU Brasil<br>
+        Programa de Iniciação Científica da HU Brasil (PIC/HU Brasil)<br>
+        Processo Seletivo de Bolsistas de Iniciação Científica 2026-2027
+    </div>
+
+    <div class="title-project" style="margin-bottom: 3cm; text-align: center; font-weight: bold; font-size: 14pt; text-transform: uppercase;">
+        INVESTIGAÇÃO DE BACTÉRIAS MULTIRRESISTENTES DE IMPORTÂNCIA EPIDEMIOLÓGICA EM SUPERFÍCIES INANIMADAS HOSPITALARES DE CONTATO INDIRETO COMO POTENCIAIS RESERVATÓRIOS AMBIENTAIS
+    </div>
+
+    <div style="margin-left: 7cm; margin-bottom: 4cm; text-align: justify; font-size: 11pt; line-height: 1.4;" class="no-indent">
+        <strong>Projeto de Pesquisa (Anonimizado)</strong> apresentado como requisito para inscrição no Processo Seletivo de Bolsas de Iniciação Científica do PIC/HU Brasil (Ciclo 2026-2027).<br><br>
+        <strong>Área de conhecimento conforme CNPq:</strong> Ciências da Saúde / Medicina / Doenças Infecciosas e Parasitárias
+    </div>
+
+    <div class="center" style="margin-top: 5cm; text-transform: uppercase; font-weight: bold;">
+        [Localidade - UF]<br>
+        2026
+    </div>
+
+    <!-- PÁGINA 2: SUMÁRIO -->
+    <div class="page-break-before">
+        <h1>1. Sumário</h1>
+        <ul class="sumario-list no-indent">
+            <li class="sumario-item"><span>1. Sumário</span><span class="dots"></span><span>2</span></li>
+            <li class="sumario-item"><span>2. Resumo</span><span class="dots"></span><span>3</span></li>
+            <li class="sumario-item"><span>3. Introdução</span><span class="dots"></span><span>4</span></li>
+            <li class="sumario-subitem"><span>3.1. Apresentação do tema</span><span class="dots"></span><span>4</span></li>
+            <li class="sumario-subitem"><span>3.2. Definição do problema</span><span class="dots"></span><span>5</span></li>
+            <li class="sumario-subitem"><span>3.3. Hipótese</span><span class="dots"></span><span>5</span></li>
+            <li class="sumario-item"><span>4. Objetivo geral</span><span class="dots"></span><span>6</span></li>
+            <li class="sumario-item"><span>5. Objetivos específicos</span><span class="dots"></span><span>6</span></li>
+            <li class="sumario-item"><span>6. Justificativa</span><span class="dots"></span><span>7</span></li>
+            <li class="sumario-item"><span>7. Revisão da literatura</span><span class="dots"></span><span>8</span></li>
+            <li class="sumario-item"><span>8. Estado da Técnica</span><span class="dots"></span><span>10</span></li>
+            <li class="sumario-item"><span>9. Metodologia</span><span class="dots"></span><span>11</span></li>
+            <li class="sumario-subitem"><span>9.1. Delineamento do estudo e local da pesquisa</span><span class="dots"></span><span>11</span></li>
+            <li class="sumario-subitem"><span>9.2. Superfícies amostradas e critérios de seleção</span><span class="dots"></span><span>11</span></li>
+            <li class="sumario-subitem"><span>9.3. Coleta e transporte das amostras</span><span class="dots"></span><span>12</span></li>
+            <li class="sumario-subitem"><span>9.4. Processamento laboratorial e isolamento bacteriano</span><span class="dots"></span><span>12</span></li>
+            <li class="sumario-subitem"><span>9.5. Identificação taxonômica fenotípica</span><span class="dots"></span><span>13</span></li>
+            <li class="sumario-subitem"><span>9.6. Teste de Sensibilidade aos Antimicrobianos (TSA)</span><span class="dots"></span><span>14</span></li>
+            <li class="sumario-subitem"><span>9.7. Análise de dados e tratamento estatístico</span><span class="dots"></span><span>15</span></li>
+            <li class="sumario-subitem"><span>9.8. Aspectos éticos e legais</span><span class="dots"></span><span>15</span></li>
+            <li class="sumario-item"><span>10. Resultados esperados</span><span class="dots"></span><span>16</span></li>
+            <li class="sumario-item"><span>11. Cronograma do Projeto</span><span class="dots"></span><span>17</span></li>
+            <li class="sumario-item"><span>12. Orçamento do Projeto</span><span class="dots"></span><span>18</span></li>
+            <li class="sumario-item"><span>13. Plano de trabalho do(a) aluno(a)</span><span class="dots"></span><span>19</span></li>
+            <li class="sumario-subitem"><span>13.1. Descrição das atividades do(a) aluno(a)</span><span class="dots"></span><span>19</span></li>
+            <li class="sumario-subitem"><span>13.2. Cronograma das atividades do(a) aluno(a)</span><span class="dots"></span><span>20</span></li>
+            <li class="sumario-item"><span>14. Bibliografia</span><span class="dots"></span><span>21</span></li>
+            <li class="sumario-item"><span>15. Anexos</span><span class="dots"></span><span>22</span></li>
+        </ul>
+    </div>
+
+    <!-- PÁGINA 3: RESUMO -->
+    <div class="page-break-before">
+        <h1>2. Resumo</h1>
+        <p class="no-indent" style="text-align: justify; margin-bottom: 18pt;">
+            As infecções relacionadas à assistência à saúde (IRAS) constituem um grave problema de saúde pública, impactando diretamente a morbimortalidade de pacientes hospitalizados. Embora as superfícies de contato direto (como as mãos dos profissionais de saúde) recebam constante atenção em protocolos de higienização, superfícies de contato indireto e menor vigilância no ambiente hospitalar — como cortinas divisórias de leitos, grades de camas, suportes de soro e painéis de controle de bombas de infusão — podem atuar como reservatórios persistentes de patógenos multirresistentes. Este estudo tem como objetivo avaliar a presença e o perfil de multirresistência de bactérias de importância epidemiológica e clínica — especificamente enterobactérias produtoras de carbapenemase (KPC/CRE), enterococos resistentes à vancomicina (VRE) e <em>Staphylococcus aureus</em> resistente à meticilina (MRSA) — presentes nessas superfícies inanimadas secundárias no Hospital Universitário [ANONIMIZADO]. Trata-se de um estudo transversal descritivo no qual serão coletadas 100 amostras das quatro superfícies selecionadas em enfermarias ativas, utilizando swabs estéreis umedecidos em solução salina estéril. As amostras serão submetidas a enriquecimento em caldo BHI e posterior semeadura em meios de cultura seletivos cromogênicos específicos para o isolamento de KPC/CRE, VRE e MRSA. A identificação taxonômica das colônias suspeitas será confirmada por coloração de Gram, testes enzimáticos e série bioquímica convencional. O perfil de susceptibilidade aos antimicrobianos e a confirmação fenotípica dos mecanismos de resistência dos isolados bacterianos serão determinados pelo método de disco-difusão em ágar (Kirby-Bauer), em conformidade com as diretrizes vigentes do BrCAST/EUCAST. Como o estudo envolve exclusivamente superfícies físicas, inanimadas e coletivas de ambiente de livre circulação, não há coleta de material de seres humanos ou identificação de pacientes, dispensando a submissão prévia ao Comitê de Ética em Pesquisa (CEP), o que agiliza sua exequibilidade. Espera-se com este estudo mapear a dispersão ambiental de patógenos multirresistentes sob vigilância epidemiológica e fornecer subsídios científicos para a revisão e o aprimoramento das práticas de limpeza e desinfecção hospitalar, visando reduzir as taxas de transmissão cruzada.
+        </p>
+        <p class="no-indent">
+            <strong>Palavras-chave:</strong> Contaminação de Equipamentos; Serviço Hospitalar de Limpeza; Antibióticos; Infecção Hospitalar; Meio Ambiente de Instituições de Saúde.
+        </p>
+    </div>
+
+    <!-- PÁGINA 4: INTRODUÇÃO -->
+    <div class="page-break-before">
+        <h1>3. Introdução</h1>
+        
+        <h3>3.1. Apresentação do tema</h3>
+        <p>
+            O ambiente hospitalar é dinâmico e envolve a circulação contínua de indivíduos com diferentes estados de saúde, o que favorece a colonização e a dispersão de microrganismos patogênicos. A sobrevivência bacteriana em superfícies inanimadas próximas ao paciente tem sido amplamente documentada na literatura como um fator crítico para a ocorrência de surtos e para a endemicidade de infecções associadas aos cuidados de saúde. A dinâmica de transmissão cruzada envolve a transferência de patógenos das superfícies ambientais para as mãos dos profissionais e, subsequentemente, para os pacientes, ou diretamente das superfícies para dispositivos médicos invasivos.
+        </p>
+        <p>
+            Historicamente, o foco dos programas de controle de infecção e higienização hospitalar tem sido as superfícies de alta frequência de toque direto e os dispositivos médicos invasivos. Contudo, há uma ampla variedade de superfícies inanimadas que fazem parte da rotina assistencial e de internação que recebem menos vigilância microbiológica e menor frequência de desinfecção sistemática. Entre essas superfícies estão as cortinas de separação de leitos (frequentemente tocadas por pacientes e profissionais antes ou após o contato físico direto), as grades de proteção das camas, os suportes verticais de soro e os painéis de controle digitais de bombas de infusão. Tais elementos, devido ao seu posicionamento espacial estratégico no entorno imediato do leito, representam pontes de transmissão indireta e podem albergar patógenos por dias ou semanas.
+        </p>
+        <p>
+            A relevância científica de investigar esses reservatórios reside no fato de que bactérias multirresistentes de extrema relevância epidemiológica — como as enterobactérias produtoras de carbapenemase do tipo KPC, enterococos resistentes à vancomicina (VRE) e <em>Staphylococcus aureus</em> resistente à meticilina (MRSA) — apresentam notável estabilidade ambiental e capacidade de persistir em superfícies hospitalares, atuando como fontes de surtos de difícil controle terapêutico. A determinação da contaminação ambiental por esses patógenos específicos no Hospital Universitário [ANONIMIZADO] preenche uma lacuna de vigilância epidemiológica ativa, saindo do rastreamento genérico e afunilando em alvos críticos para fundamentar ações de controle de infecção hospitalar direcionadas e eficazes.
+        </p>
+
+        <h3>3.2. Definição do problema</h3>
+        <p>
+            Diante do papel epidemiológico das superfícies ambientais na persistência de patógenos, levanta-se a seguinte questão de pesquisa: 
+            <strong>Superfícies inanimadas hospitalares de contato indireto e baixo monitoramento microbiológico atuam como reservatórios ativos para bactérias multirresistentes de relevância epidemiológica crítica (KPC, VRE e MRSA)?</strong>
+        </p>
+
+        <h3>3.3. Hipótese</h3>
+        <p class="no-indent" style="margin-bottom: 6pt;">
+            <strong>Hipótese Geral:</strong> Superfícies inanimadas secundárias de contato frequente no entorno do paciente (cortinas divisórias, grades de camas, suportes de soro e painéis de bombas de infusão), que não passam por desinfecção concorrente sistemática, apresentam contaminação significativa e atuam como reservatórios de bactérias multirresistentes sob vigilância epidemiológica (KPC, VRE e MRSA).
+        </p>
+        <p class="no-indent">
+            <strong>Hipóteses Secundárias:</strong>
+        </p>
+        <ol>
+            <li>A carga bacteriana e o perfil de patógenos encontrados diferem significativamente entre as superfícies têxteis (cortinas) e as superfícies poliméricas ou metálicas (grades de camas, suportes de soro e painéis de bombas).</li>
+            <li>A taxa de contaminação é maior em superfícies mais próximas ao paciente, como grades de leitos e cortinas divisórias, devido ao maior potencial de deposição aerossolizada e contato manual repetido.</li>
+            <li>Entre os microrganismos isolados, encontram-se cepas de <em>Staphylococcus aureus</em> resistentes à meticilina (MRSA) e enterobactérias produtoras de beta-lactamases de espectro estendido (ESBL), dada a alta endemicidade dessas cepas no ambiente de internação.</li>
+        </ol>
+    </div>
+
+    <!-- PÁGINA 5: OBJETIVOS -->
+    <div class="page-break-before">
+        <h1>4. Objetivo geral</h1>
+        <p>
+            Avaliar o perfil de contaminação ambiental e a presença de bactérias multirresistentes de importância epidemiológica crítica (especificamente enterobactérias produtoras de carbapenemase do tipo KPC, enterococos resistentes à vancomicina - VRE, e *Staphylococcus aureus* resistente à meticilina - MRSA) em superfícies inanimadas de contato indireto e sob baixo monitoramento em enfermarias do Hospital Universitário [ANONIMIZADO], estimando o seu papel potencial como reservatórios ambientais de transmissão cruzada.
+        </p>
+
+        <h1>5. Objetivos específicos</h1>
+        <ol>
+            <li>Quantificar a ocorrência de contaminação bacteriana e isolar patógenos bacterianos a partir de amostras obtidas de quatro tipos de superfícies: cortinas de separação de leitos, grades de camas, suportes de soro e painéis de bombas de infusão.</li>
+            <li>Identificar fenotipicamente as espécies bacterianas isoladas de maior relevância clínica, focando em bactérias oportunistas e patógenos primários associados a IRAS.</li>
+            <li>Determinar o perfil de sensibilidade aos antimicrobianos dos isolados bacterianos frente a diferentes classes de antibióticos por meio de teste de disco-difusão.</li>
+            <li>Avaliar comparativamente as taxas e perfis de contaminação entre os diferentes locais amostrados, identificando quais superfícies representam maior risco de disseminação.</li>
+            <li>Formular recomendações baseadas em evidências locais para os comitês internos de infecção hospitalar (CCIH) no sentido de aperfeiçoar os protocolos de desinfecção física e higienização ambiental.</li>
+        </ol>
+    </div>
+
+    <!-- PÁGINA 6: JUSTIFICATIVA -->
+    <div class="page-break-before">
+        <h1>6. Justificativa</h1>
+        <p>
+            As infecções relacionadas à assistência à saúde (IRAS) impõem encargos significativos aos sistemas de saúde através do aumento no tempo de internação dos pacientes, morbimortalidade elevada e expressivo incremento nos custos operacionais com terapias antimicrobianas de largo espectro. O controle dessas infecções exige uma abordagem multifacetada que vai além da higiene das mãos dos profissionais, englobando a qualidade microbiológica do ambiente assistencial imediato. A investigação científica direcionada a superfícies de contato indireto e monitoramento escasso reveste-se de grande relevância prática, pois locais como cortinas, suportes de soro, grades de leito e painéis de equipamentos eletrônicos frequentemente escapam dos processos regulares e rigorosos de desinfecção hospitalar mecânica.
+        </p>
+        <p>
+            As cortinas de privacidade hospitalares, por exemplo, são feitas majoritariamente de tecidos que absorvem umidade e matéria orgânica, fornecendo condições físicas favoráveis para a adesão e viabilidade bacteriana de longo prazo. Simultaneamente, grades de cama e suportes de soro são manipulados de forma repetitiva por profissionais, acompanhantes e pelos próprios pacientes em momentos de vulnerabilidade imunológica, atuando como interfaces perfeitas de deposição bacteriana. O estudo desses elementos viabiliza a identificação de focos silenciosos de contaminação no Hospital Universitário [ANONIMIZADO], gerando dados empíricos cruciais para que o Serviço de Controle de Infecção Hospitalar redesenhe a frequência de higienização destas áreas.
+        </p>
+        <p>
+            Sob a ótica teórica, este projeto fornece dados locais sobre a circulação e perfil de susceptibilidade de bactérias nosográficas e sua persistência sob condições de estresse ambiental. A opção por focar a pesquisa exclusivamente em superfícies físicas e amostras do ambiente inanimado (sem o envolvimento direto de seres humanos, sem coleta de dados clínicos individuais ou manipulação direta de pacientes) elimina os riscos bioéticos associados ao manuseio de dados pessoais sensíveis e procedimentos invasivos em indivíduos hospitalizados. Isso viabiliza a execução célere das etapas do projeto sem a necessidade de tramitação longa no Comitê de Ética em Pesquisa (CEP), otimizando o cumprimento rigoroso do cronograma de 12 meses da Iniciação Científica e garantindo a aplicabilidade imediata dos resultados laboratoriais nas rotinas assistenciais do hospital.
+        </p>
+    </div>
+
+    <!-- PÁGINA 7: REVISÃO DA LITERATURA -->
+    <div class="page-break-before">
+        <h1>7. Revisão da literatura</h1>
+        <p>
+            A transmissão de microrganismos multirresistentes a partir de reservatórios ambientais constitui uma via reconhecida de aquisição de infecções hospitalares. Estudos pioneiros demonstraram que diversos patógenos nosocomiais conseguem sobreviver por longos períodos em superfícies inanimadas secas. <em>Staphylococcus aureus</em> (incluindo MRSA) e <em>Acinetobacter baumannii</em> podem persistir em superfícies de plástico ou metal por meses, enquanto enterococos sobrevivem por semanas em materiais têxteis.
+        </p>
+        <p>
+            O estudo clássico realizado por OHL et al. (2012) [PMID 22464039] investigou longitudinalmente a dinâmica de contaminação de cortinas de privacidade hospitalares. Os distribuidores constataram que as cortinas novas ou higienizadas tornavam-se rapidamente contaminadas com bactérias patogênicas em um curto intervalo de tempo após a sua colocação nos quartos dos pacientes. Em poucos dias de uso contínuo, patógenos oportunistas como <em>Staphylococcus aureus</em> e enterococos resistentes à vancomicina (VRE) foram isolados dos tecidos das cortinas, evidenciando a rapidez com que essas barreiras físicas tornam-se reservatórios microbiológicos e destacando a ineficiência de trocas ou higienizações esporádicas.
+        </p>
+        <p>
+            Corroborando a preocupação com a persistência de patógenos em ambientes críticos, SHEK et al. (2017) [PMID 28413115] conduziram um estudo transversal em uma unidade de queimados e cirurgia plástica para avaliar as cortinas de privacidade. Os autores observaram taxas extremamente elevadas de contaminação bacteriana nestas superfícies, o que é alarmante dada a alta vulnerabilidade de pacientes queimados a infecções bacterianas invasivas. O estudo confirmou que superfícies manipuladas de forma repetida que não entram nos protocolos de desinfecção diária sistemática acumulam carga patogênica expressiva, configurando riscos graves de transmissão cruzada para pacientes que já apresentam a barreira cutânea comprometida.
+        </p>
+        <p>
+            Para mitigar a contaminação desses reservatórios têxteis, SCHWEIZER et al. (2021) [PMID 34750366] conduziram um ensaio clínico randomizado piloto avaliando diferentes métodos de desinfecção química ativa para reduzir a carga bacteriana em cortinas de privacidade. A pesquisa avaliou a eficácia de sprays desinfetantes e lenços umedecidos com agentes biocidas aplicados diretamente nas cortinas em uso. Os resultados mostraram que intervenções direcionadas podem reduzir temporariamente a carga bacteriana, contudo, a recontaminação ocorre rapidamente se a higiene das mãos dos profissionais e a frequência de limpeza geral não forem rigorosamente mantidas. Esse achado ressalta a complexidade da manutenção da esterilidade relativa e reforça a necessidade de vigilância constante do ambiente.
+        </p>
+        <p>
+            Adicionalmente, FERREIRA et al. (2016) [PMID 27289247] avaliaram a contaminação por MRSA em quartos de pacientes colonizados ou infectados por essa bactéria no Brasil. A pesquisa analisou várias superfícies físicas, demonstrando correlação direta entre a presença do paciente portador e o isolamento de cepas geneticamente idênticas de MRSA nas superfícies do leito, grades e mesas de cabeceira. O estudo evidenciou que a contaminação ambiental não é homogênea e que superfícies próximas ao leito atuam como os principais epicentros microbiológicos no quarto do paciente, exigindo processos específicos de desinfecção terminal e concorrente para quebrar o ciclo de transmissão no ambiente hospitalar brasileiro.</p>
+<p>
+No contexto brasileiro, a disseminação de enterobactérias produtoras de carbapenemase (<em>Klebsiella pneumoniae</em> carbapenemase - KPC) e de enterococos resistentes à vancomicina (VRE) tem se consolidado como um desafio de controle epidemiológico. SILVA et al. (2021) [DOI: 10.33448/rsd-v10i11.19565] identificaram altas taxas de colonização de superfícies inanimadas hospitalares por enterobactérias com perfil de resistência a carbapenêmicos, ressaltando o papel crítico do ambiente como reservatório silencioso. Adicionalmente, surtos recentes de VRE em hospitais terciários brasileiros documentados por SILVA et al. (2024) [DOI: 10.1590/S2237-96222024v34e20240135.en] evidenciam que a contaminação cruzada por meio de superfícies de contato indireto e pias é um vetor central na persistência e alastramento de clones multirresistentes, tornando a vigilância ambiental ativa destas superfícies um elemento estratégico de controle sanitário.
+        </p>
+    </div>
+
+    <!-- PÁGINA 8: ESTADO DA TÉCNICA -->
+    <div class="page-break-before">
+        <h1>8. Estado da Técnica</h1>
+        <p>
+            O monitoramento da higiene ambiental e da carga microbiológica em serviços de saúde evoluiu significativamente, dispondo atualmente de abordagens visuais, químicas e microbiológicas. Cada metodologia apresenta vantagens metodológicas e limitações operacionais distintas na prática de controle de infecção hospitalar.
+        </p>
+        <p>
+            A inspeção visual constitui o método mais simples e tradicional de avaliação da limpeza, porém é altamente subjetiva e incapaz de detectar contaminação invisível a olho nu ou de avaliar a presença de patógenos viáveis. Métodos químicos, como o uso de marcadores fluorescentes aplicados em superfícies antes da higienização para posterior leitura com luz ultravioleta, são úteis para avaliar a adesão dos profissionais de limpeza aos protocolos físicos, mas não medem a carga bacteriana residual. A bioluminescência de ATP (trifosfato de adenosina) mede a presença de matéria orgânica total (microbiana e biológica humana) em poucos segundos, fornecendo um indicador rápido de sujeira em superfícies. Contudo, o teste de ATP não discrimina entre detritos biológicos viáveis ou inviáveis e não identifica as espécies bacterianas presentes, tampouco seus respectivos perfis de resistência aos antibióticos.
+        </p>
+        <p>
+            Nesse panorama, a utilização de <strong>meios de cultura cromogênicos seletivos</strong> representa o estado da técnica mais avançado e específico para a vigilância microbiológica ativa de microrganismos multirresistentes. Ao contrário do cultivo convencional em meios tradicionais — que recupera uma grande diversidade de bactérias da microbiota comum e de menor importância epidemiológica (tornando o processo laborioso e pouco direcionado) —, os meios cromogênicos contêm inibidores e substratos enzimáticos específicos. Isso permite que bactérias como MRSA, VRE e enterobactérias produtoras de carbapenemase (KPC/CRE) cresçam seletivamente com colorações distintas e características em 24 a 48 horas. O cultivo seletivo, seguido pelo teste de susceptibilidade aos antimicrobianos (TSA) pelo método de disco-difusão (Kirby-Bauer), permanece como o <strong>padrão-ouro</strong> para caracterização fenotípica e confirmação de mecanismos de resistência regulados pelo BrCAST/EUCAST, permitindo ações rápidas de controle de infecção hospitalar.
+        </p>
+    </div>
+
+    <!-- PÁGINA 9: METODOLOGIA -->
+    <div class="page-break-before">
+        <h1>9. Metodologia</h1>
+
+        <h3>9.1. Delineamento do estudo e local da pesquisa</h3>
+        <p>
+            Este é um estudo observacional transversal com abordagem descritiva e caráter analítico in vitro, focado no isolamento e na identificação microbiológica de bactérias a partir de superfícies inanimadas. O estudo será conduzido nas enfermarias clínicas e cirúrgicas adultas do Hospital Universitário [ANONIMIZADO]. As análises laboratoriais de cultivo, identificação bioquímica e testes de susceptibilidade antimicrobiana serão executadas nas dependências do Laboratório de Microbiologia [ANONIMIZADO] da própria instituição.
+        </p>
+
+        <h3>9.2. Superfícies amostradas e critérios de seleção</h3>
+        <p class="no-indent" style="margin-bottom: 6pt;">
+            Serão coletadas 100 amostras microbiológicas de superfícies ambientais, distribuídas de forma homogênea (n = 25 para cada tipo de superfície):
+        </p>
+        <ul>
+            <li><strong>Cortinas de separação de leitos:</strong> Amostragem da zona de toque frequente (borda lateral anterior da cortina, a uma altura média de 1,2 a 1,5 metros do piso).</li>
+            <li><strong>Grades de cabeceira das camas:</strong> Coleta na região superior e central da grade plástica ou metálica do leito ativo.</li>
+            <li><strong>Suportes de soro:</strong> Amostragem da haste vertical metálica ajustável na área de pegada manual dos profissionais de saúde.</li>
+            <li><strong>Painéis de controle de bombas de infusão:</strong> Coleta na superfície do teclado numérico e botões de acionamento do dispositivo de infusão ativa no leito.</li>
+        </ul>
+        <p>
+            <strong>Critérios de Inclusão:</strong> Superfícies pertencentes a leitos de enfermaria ocupados por pacientes com tempo de internação superior a 48 horas.  
+            <strong>Critérios de Exclusão:</strong> Superfícies localizadas em leitos desocupados ou que passaram por processo documentado de desinfecção terminal ou concorrente há menos de 2 horas da coleta programada.
+        </p>
+
+        <h3>9.3. Coleta e transporte das amostras</h3>
+        <p>
+            As coletas serão realizadas semanalmente por um período de três meses (entre o 3º e o 5º mês do projeto). Para cada superfície, será utilizado um swab de algodão estéril previamente umedecido em solução salina estéril a 0,85%. Para superfícies planas delimitadas (cortinas, grades de camas e suportes de soro), a coleta será padronizada friccionando-se o swab em movimentos firmes unidirecionais e rotatórios sobre uma área de 100 cm² (10x10 cm), delimitada temporariamente por um gabarito de plástico estéril descartável. Para o painel da bomba de infusão, devido ao formato irregular, o swab será friccionado uniformemente sobre toda a extensão dos botões e área de toque do teclado.
+        </p>
+        <p>
+            Imediatamente após a fricção, os swabs serão acondicionados individualmente em tubos com meio de transporte Stuart identificados com códigos de anonimização (ex. CRT-01, GRD-01, SUP-01, BOM-01). Os tubos serão mantidos sob refrigeração em caixas térmicas (4°C a 8°C) e transportados ao laboratório para processamento em até duas horas após a coleta.
+        </p>
+
+        <h3>9.4. Processamento laboratorial e isolamento bacteriano</h3>
+        <p>
+            No laboratório, os swabs serão transferidos para tubos contendo 5 mL de Caldo Infusão Cérebro Coração (BHI - <em>Brain Heart Infusion</em>) com o objetivo de realizar o enriquecimento primário da amostra e aumentar a viabilidade microbiana e sensibilidade de recuperação. Os tubos serão incubados em estufa microbiológica a 35°C (± 2°C) por 24 horas sob condições aeróbicas.
+        </p>
+        <p class="no-indent" style="margin-bottom: 6pt;">
+            Após o período de incubação em caldo BHI, alíquotas de 10 µL da cultura enriquecida serão semeadas por esgotamento (técnica de estrias isoladas) em placas de Petri contendo diferentes meios de cultura seletivos e diferenciais:
+        </p>
+        <ul>
+            <li><strong>Ágar Sangue de Carneiro a 5%:</strong> Meio enriquecido não seletivo, utilizado para isolamento de cocos Gram-positivos e verificação de atividade hemolítica (alfa, beta ou gama-hemólise).</li>
+            <li><strong>Ágar MacConkey:</strong> Seletivo para bacilos Gram-negativos e diferencial para fermentadores de lactose.</li>
+            <li><strong>Ágar Manitol Salgado:</strong> Altamente seletivo para espécies do gênero <em>Staphylococcus</em> e diferencial para fermentadores de manitol (<em>Staphylococcus aureus</em> positivo/amarelo).</li>
+            <li><strong>Ágar Bile Esculina:</strong> Seletivo e diferencial para o gênero <em>Enterococcus</em> spp. (presença de colônias negras devido à hidrólise da esculina).</li>
+        </ul>
+        <p>
+            As placas serão incubadas a 35°C por 24 a 48 horas em aerobiose para leitura das colônias suspeitas.
+        </p>
+
+        <h3>9.5. Identificação taxonômica fenotípica</h3>
+        <p class="no-indent" style="margin-bottom: 6pt;">
+            A identificação das bactérias isoladas seguirá protocolos microbiológicos manuais estabelecidos:
+        </p>
+        <ol>
+            <li><strong>Triagem Inicial:</strong> Coloração de Gram para avaliação morfotintorial (cocos Gram-positivos vs. bacilos Gram-negativos).</li>
+            <li><strong>Identificação de Cocos Gram-positivos:</strong>
+                <ul>
+                    <li><em>Teste de Catalase:</em> Diferenciação de <em>Staphylococcus</em> spp. (catalase positiva) de <em>Streptococcus</em>/<em>Enterococcus</em> (catalase negativa).</li>
+                    <li><em>Teste de Coagulase em tubo/lâmina:</em> Diferenciação de <em>Staphylococcus aureus</em> (coagulase positivo) dos Estafilococos Coagulase Negativa (SCN - coagulase negativo).</li>
+                    <li><em>Identificação de Enterococcus spp.:</em> Confirmada pela positividade na hidrólise da bile esculina e capacidade de crescimento em meio contendo NaCl 6,5%.</li>
+                </ul>
+            </li>
+            <li><strong>Identificação de Bacilos Gram-negativos:</strong>
+                <ul>
+                    <li><em>Teste de Oxidase:</em> Separação inicial de Enterobacterales (oxidase negativa) e não-fermentadores como <em>Pseudomonas aeruginosa</em> (oxidase positiva) e <em>Acinetobacter baumannii</em> (oxidase negativa).</li>
+                    <li><em>Série Bioquímica Convencional (Meio Rugai modificado ou meios clássicos):</em> Inoculação em meios para verificação de produção de gás e sulfeto de hidrogênio (H2S), fermentação de glicose, sacarose e lactose (TSI), descarboxilação da lisina (LIA), motilidade e produção de indol (MIO), utilização de citrato (Citrato de Simmons) e atividade da urease.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>9.6. Teste de Sensibilidade aos Antimicrobianos (TSA)</h3>
+        <p>
+            O perfil de susceptibilidade frente a antimicrobianos de uso clínico relevante será determinado pelo método de disco-difusão em ágar Mueller-Hinton (Kirby-Bauer), seguindo os critérios de padronização, diâmetro de halos e pontos de corte regulamentados pelo BrCAST/EUCAST vigente.
+        </p>
+        <ul>
+            <li><strong>Isolados de Staphylococcus aureus e SCN:</strong> Serão testados discos de Cefoxitina (30 µg) para triagem de resistência à meticilina (MRSA), Penicilina G (1 UI/10 µg), Eritromicina (15 µg), Clindamicina (2 µg), Sulfametoxazol-Trimetoprima (1,25/23,75 µg), Ciprofloxacina (5 µg) e Linezolida (30 µg).</li>
+            <li><strong>Isolados de Enterococcus spp.:</strong> Discos de Vancomicina (5 µg) e Teicoplanina (30 µg) para triagem de resistência a glicopeptídeos (VRE), Ampicilina (2 µg), Gentamicina de alta carga (120 µg) e Estreptomicina de alta carga (300 µg).</li>
+            <li><strong>Isolados de Bacilos Gram-negativos (Enterobactérias e Não-fermentadores):</strong> Discos de Ampicilina (10 µg), Amoxicilina/Ácido Clavulânico (20/10 µg), Ceftriaxona (30 µg), Ceftazidima (30 µg), Cefepima (30 µg), Imipenem (10 µg), Meropenem (10 µg), Ciprofloxacina (5 µg), Amicacina (30 µg) e Sulfametoxazol-Trimetoprima.</li>
+            <li><strong>Controle de Qualidade:</strong> Serão utilizadas cepas de referência internacionais para controle de qualidade dos discos e do ágar Mueller-Hinton em todos os lotes testados (<em>Staphylococcus aureus</em> ATCC 25923, <em>Escherichia coli</em> ATCC 25922 e <em>Pseudomonas aeruginosa</em> ATCC 27853).</li>
+        </ul>
+
+        <h3>9.7. Análise de dados e tratamento estatístico</h3>
+        <p>
+            Os dados microbiológicos e as variáveis das superfícies (tipo de superfície, local da coleta) serão organizados em banco de dados eletrônico no programa Microsoft Excel. A análise estatística descritiva consistirá no cálculo de frequências absolutas e relativas das superfícies contaminadas e das espécies bacterianas identificadas, bem como dos percentuais de sensibilidade e resistência aos antimicrobianos.
+        </p>
+        <p>
+            A análise inferencial será conduzida para testar a associação entre o tipo de superfície e a presença de patógenos específicos ou bactérias multirresistentes. Para tanto, serão aplicados os testes estatísticos Qui-quadrado de Pearson ou o Teste Exato de Fisher, adotando-se o nível de significância estatística de p &lt; 0,05. As análises estatísticas serão efetuadas por meio do software de distribuição livre R (versão atualizada).
+        </p>
+
+        <h3>9.8. Aspectos éticos e legais</h3>
+        <p>
+            A presente proposta de pesquisa caracteriza-se como um estudo in vitro de vigilância ambiental no qual as amostras microbiológicas são isoladas exclusivamente a partir de superfícies inanimadas coletivas e públicas instaladas no ambiente físico hospitalar (grades de cama, hastes de soro, painéis eletrônicos e cortinas). Não haverá qualquer coleta de fluidos biológicos humanos, aplicação de questionários, análise de prontuários clínicos, ou procedimentos de intervenção direta ou indireta em pacientes, acompanhantes ou profissionais de saúde.
+        </p>
+        <p>
+            Assim, de acordo com as diretrizes estabelecidas pelas Resoluções nº 466/2012 e nº 510/2016 do Conselho Nacional de Saúde (CNS), que dispõem sobre pesquisas envolvendo seres humanos no Brasil, o presente projeto não apresenta elementos constitutivos que configurem pesquisa com seres humanos. Por conseguinte, este estudo não exige submissão ou tramitação para análise ética no Comitê de Ética em Pesquisa (CEP)/CONEP, permitindo a execução imediata das coletas de amostras a partir do início da vigência das atividades do projeto, desde que autorizada formalmente pela Diretoria de Ensino e Pesquisa do Hospital Universitário [ANONIMIZADO] por meio da obtenção da Carta de Anuência Institucional (conforme Modelo em Anexo).
+        </p>
+    </div>
+
+    <!-- PÁGINA 10: RESULTADOS ESPERADOS -->
+    <div class="page-break-before">
+        <h1>10. Resultados esperados</h1>
+        <ol>
+            <li><strong>Mapeamento da Contaminação:</strong> Identificar a taxa geral de contaminação bacteriana nas superfícies hospitalares inanimadas estudadas, evidenciando quais locais negligenciados (cortinas, grades, suportes e bombas de infusão) apresentam maior carga microbiológica média residual.</li>
+            <li><strong>Identificação de Patógenos Clínicos:</strong> Detectar a presença de bactérias do grupo ESKAPE (<em>Staphylococcus aureus</em>, enterococos e bacilos Gram-negativos como <em>K. pneumoniae</em>, <em>A. baumannii</em> e <em>P. aeruginosa</em>) nessas superfícies de contato indireto no Hospital Universitário [ANONIMIZADO].</li>
+            <li><strong>Perfil de Resistência:</strong> Determinar a prevalência de bactérias resistentes aos antimicrobianos circulantes no ambiente físico da instituição, com especial atenção à proporção de isolados fenotipicamente caracterizados como MRSA ou produtores de ESBL/carbapenemases.</li>
+            <li><strong>Subsídio a Protocolos de Higiene:</strong> Elaborar um relatório técnico descritivo dos focos de contaminação e encaminhá-lo à Comissão de Controle de Infecção Hospitalar (CCIH) e ao Serviço de Higiene e Limpeza da instituição. Estes dados empíricos servirão para subsidiar a revisão e o aprimoramento dos cronogramas e técnicas de desinfecção física das enfermarias, como o estabelecimento de cronogramas fixos para lavagem de cortinas divisórias e rotinas obrigatórias de desinfecção mecânica de suportes de soro e bombas de infusão a cada plantão.</li>
+            <li><strong>Formação de Recursos Humanos:</strong> Desenvolver as competências científicas e laboratoriais do estudante bolsista na área de microbiologia aplicada à segurança do paciente e controle de infecções, preparando-o para o raciocínio epidemiológico e para a redação acadêmica de relatórios técnicos e artigos científicos.</li>
+        </ol>
+    </div>
+
+    <!-- PÁGINA 11: CRONOGRAMA -->
+    <div class="page-break-before">
+        <h1>11. Cronograma do Projeto</h1>
+        <p class="no-indent">
+            A execução do projeto de pesquisa terá duração de 12 meses (coincidente com a vigência da bolsa do PIC/HU Brasil, de 01/09/2026 a 31/08/2027), estruturada conforme o detalhamento mensal abaixo:
+        </p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Etapa / Atividade</th>
+                    <th>M1 (Set)</th>
+                    <th>M2 (Out)</th>
+                    <th>M3 (Nov)</th>
+                    <th>M4 (Dez)</th>
+                    <th>M5 (Jan)</th>
+                    <th>M6 (Fev)</th>
+                    <th>M7 (Mar)</th>
+                    <th>M8 (Abr)</th>
+                    <th>M9 (Mai)</th>
+                    <th>M10 (Jun)</th>
+                    <th>M11 (Jul)</th>
+                    <th>M12 (Ago)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">1. Revisão bibliográfica e busca de literatura</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">2. Obtenção de autorizações e contato com CCIH</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">3. Planejamento logístico e treinamento prático</td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">4. Coleta semanal de swabs nas enfermarias</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">5. Processamento e isolamento microbiológico</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">6. Identificação bioquímica e enzimática</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">7. Teste de Sensibilidade Antimicrobiana (TSA)</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">8. Tabulação, análise estatística e interpretação</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">9. Redação do Relatório Parcial do PIC</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">10. Discussões de resultados com a CCIH</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">11. Redação do Relatório Final e Artigo</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                </tr>
+                <tr>
+                    <td class="bold">12. Submissão do resumo para o Congresso de IC</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PÁGINA 12: ORÇAMENTO -->
+    <div class="page-break-before">
+        <h1>12. Orçamento do Projeto</h1>
+        <p class="no-indent">
+            Os materiais necessários estão listados na tabela abaixo, focados em consumo de laboratório convencional. A infraestrutura e equipamentos já estão disponíveis nas dependências do laboratório de microbiologia do hospital, não demandando gastos adicionais.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Descrição do Insumo / Especificação</th>
+                    <th>Unid.</th>
+                    <th>Qtd.</th>
+                    <th>Valor Unit. (R$)</th>
+                    <th>Valor Total (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td>Swabs estéreis de algodão para coleta com tubo de transporte</td>
+                    <td class="center">Caixa</td>
+                    <td class="center">1</td>
+                    <td class="right">150,00</td>
+                    <td class="right">150,00</td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td>Caldo Infusão Cérebro Coração (BHI) desidratado - frasco 500g</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">1</td>
+                    <td class="right">420,00</td>
+                    <td class="right">420,00</td>
+                </tr>
+                <tr>
+                    <td class="center">3</td>
+                    <td>Ágar Sangue de Carneiro a 5% (placas prontas p/ uso)</td>
+                    <td class="center">Pacote</td>
+                    <td class="center">10</td>
+                    <td class="right">95,00</td>
+                    <td class="right">950,00</td>
+                </tr>
+                <tr>
+                    <td class="center">4</td>
+                    <td>Ágar MacConkey desidratado - frasco 500g</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">1</td>
+                    <td class="right">380,00</td>
+                    <td class="right">380,00</td>
+                </tr>
+                <tr>
+                    <td class="center">5</td>
+                    <td>Ágar Manitol Salgado desidratado - frasco 500g</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">1</td>
+                    <td class="right">390,00</td>
+                    <td class="right">390,00</td>
+                </tr>
+                <tr>
+                    <td class="center">6</td>
+                    <td>Ágar Bile Esculina desidratado - frasco 500g</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">1</td>
+                    <td class="right">450,00</td>
+                    <td class="right">450,00</td>
+                </tr>
+                <tr>
+                    <td class="center">7</td>
+                    <td>Ágar Mueller-Hinton desidratado - frasco 500g</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">1</td>
+                    <td class="right">350,00</td>
+                    <td class="right">350,00</td>
+                </tr>
+                <tr>
+                    <td class="center">8</td>
+                    <td>Discos de antibióticos p/ TSA (Kits específicos Kirby-Bauer)</td>
+                    <td class="center">Frasco</td>
+                    <td class="center">8</td>
+                    <td class="right">45,00</td>
+                    <td class="right">360,00</td>
+                </tr>
+                <tr>
+                    <td class="center">9</td>
+                    <td>Kit de reagentes para coloração de Gram (quatro frascos 250mL)</td>
+                    <td class="center">Kit</td>
+                    <td class="center">1</td>
+                    <td class="right">160,00</td>
+                    <td class="right">160,00</td>
+                </tr>
+                <tr>
+                    <td class="center">10</td>
+                    <td>Placas de Petri plásticas descartáveis estéreis 90x15mm</td>
+                    <td class="center">Caixa</td>
+                    <td class="center">1</td>
+                    <td class="right">290,00</td>
+                    <td class="right">290,00</td>
+                </tr>
+                <tr>
+                    <td class="center">11</td>
+                    <td>Alças bacteriológicas descartáveis estéreis de 10 µL</td>
+                    <td class="center">Pacote</td>
+                    <td class="center">3</td>
+                    <td class="right">40,00</td>
+                    <td class="right">120,00</td>
+                </tr>
+                <tr>
+                    <td class="center">12</td>
+                    <td>Equipamentos de Proteção Individual (luvas, máscaras, toucas)</td>
+                    <td class="center">Pacote</td>
+                    <td class="center">4</td>
+                    <td class="right">60,00</td>
+                    <td class="right">240,00</td>
+                </tr>
+                <tr>
+                    <td class="center">13</td>
+                    <td>Tubos de ensaio de vidro autoclaváveis 15 mL</td>
+                    <td class="center">Pacote</td>
+                    <td class="center">1</td>
+                    <td class="right">180,00</td>
+                    <td class="right">180,00</td>
+                </tr>
+                <tr>
+                    <td class="center">14</td>
+                    <td>Fita indicadora de esterilização autoclavável (rolo)</td>
+                    <td class="center">Rolo</td>
+                    <td class="center">2</td>
+                    <td class="right">30,00</td>
+                    <td class="right">60,00</td>
+                </tr>
+                <tr>
+                    <td class="bold center" colspan="5">VALOR TOTAL GERAL DOS MATERIAIS</td>
+                    <td class="bold right">R$ 4.500,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PÁGINA 13: PLANO DE TRABALHO DO ALUNO -->
+    <div class="page-break-before">
+        <h1>13. Plano de trabalho do(a) aluno(a)</h1>
+
+        <h3>13.1. Descrição das atividades do(a) aluno(a) (12 meses)</h3>
+        <p class="no-indent" style="margin-bottom: 6pt;">
+            O(A) estudante bolsista desempenhará papel ativo em todas as fases do projeto de pesquisa, atuando sob supervisão direta do orientador e dos técnicos do laboratório. Suas atividades incluem:
+        </p>
+        <ul>
+            <li><strong>Mês 1 (Set/2026):</strong> Estudo de manuais de biossegurança laboratorial; revisão da literatura focando em contaminação ambiental e resistência bacteriana; redação do fichamento dos artigos principais.</li>
+            <li><strong>Mês 2 (Out/2026):</strong> Auxílio na submissão de documentos e obtenção da anuência formal do hospital; treinamento técnico prático no laboratório de microbiologia, cobrindo o preparo de meios de cultura, esterilização (autoclavagem) e técnicas de semeadura microbiológica.</li>
+            <li><strong>Mês 3 a 5 (Nov/2026 a Jan/2027):</strong> Realização sistemática e semanal das coletas de swabs nas enfermarias utilizando técnica asséptica e gabarito; transporte térmico das amostras e inoculação inicial em caldo BHI no laboratório.</li>
+            <li><strong>Mês 6 a 8 (Fev/2027 a Abr/2027):</strong> Isolamento bacteriano em placas seletivas e diferenciais; realização de coloração de Gram; condução de testes fenotípicos manuais básicos (catalase, coagulase e inoculação na série bioquímica Rugai).</li>
+            <li><strong>Mês 7 a 9 (Mar/2027 a Mai/2027):</strong> Preparo de suspensão bacteriana na escala 0,5 de McFarland e semeadura em placas Mueller-Hinton; aplicação de discos de antimicrobianos para determinação do TSA; leitura e medição milimétrica dos halos de inibição utilizando régua ou paquímetro.</li>
+            <li><strong>Mês 9 e 10 (Mai/2027 a Jun/2027):</strong> Tabulação dos resultados em planilha eletrônica; aplicação de testes estatísticos de associação (Qui-quadrado/Fisher) com auxílio do orientador; redação do relatório parcial das atividades de Iniciação Científica para envio à coordenação do PIC.</li>
+            <li><strong>Mês 11 (Jul/2027):</strong> Discussão dos perfis de contaminação com a equipe de controle de infecção (CCIH) e elaboração de material visual (como panfletos ou cartazes explicativos) sobre a higienização de superfícies acessórias.</li>
+            <li><strong>Mês 12 (Ago/2027):</strong> Redação do relatório final de pesquisa da Iniciação Científica, contendo os resultados e a discussão confrontada com a literatura científica atualizada; preparação de resumo científico para submissão a congresso acadêmico da instituição ou de microbiologia nacional.</li>
+        </ul>
+
+        <h3>13.2. Cronograma das atividades do(a) aluno(a)</h3>
+        <p class="no-indent">
+            O cronograma de atividades do bolsista coincide com o do projeto global, cobrindo os 12 meses de vigência da bolsa do PIC/HU Brasil (01/09/2026 a 31/08/2027):
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Etapa / Atividade do Estudante</th>
+                    <th>M1</th>
+                    <th>M2</th>
+                    <th>M3</th>
+                    <th>M4</th>
+                    <th>M5</th>
+                    <th>M6</th>
+                    <th>M7</th>
+                    <th>M8</th>
+                    <th>M9</th>
+                    <th>M10</th>
+                    <th>M11</th>
+                    <th>M12</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="bold">1. Revisão integrativa da literatura e biossegurança</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">2. Treinamento prático e obtenção de anuência</td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">3. Coleta de swab de superfície nas enfermarias</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">4. Inoculação BHI e semeadura primária</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">5. Confirmação bioquímica dos isolados</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">6. Realização de Testes de Sensibilidade (TSA)</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">7. Organização e processamento dos dados</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">8. Redação do Relatório Parcial do PIC</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">9. Interação com CCIH e elaboração de material</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="bold">10. Redação do Relatório Final de IC e Artigo</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td class="center">X</td>
+                    <td class="center">X</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PÁGINA 14: BIBLIOGRAFIA -->
+    <div class="page-break-before animate-page">
+        <h1>14. Bibliografia</h1>
+        
+        <div class="bib-entry">
+            FERREIRA, Adriano Menis et al. Contamination of environmental surfaces by methicillin-resistant Staphylococcus aureus (MRSA) in rooms of inpatients with MRSA-positive body sites. <strong>Brazilian Journal of Microbiology</strong>, v. 47, n. 3, p. 610-616, 2016. DOI: 10.1016/j.bjm.2016.04.009. (PMID: 27289247).
+        </div>
+
+        <div class="bib-entry">
+            OHL, Michael et al. Hospital privacy curtains are frequently and rapidly contaminated with potentially pathogenic bacteria. <strong>American Journal of Infection Control</strong>, v. 40, n. 10, p. 904-906, 2012. DOI: 10.1016/j.ajic.2011.12.017. (PMID: 22464039).
+        </div>
+
+        <div class="bib-entry">
+            SCHWEIZER, Marin L. et al. Assessment of cleaning methods on bacterial burden of hospital privacy curtains: a pilot randomized controlled trial. <strong>Scientific Reports</strong>, v. 11, n. 1, p. 21503, 2021. DOI: 10.1038/s41598-021-00936-4. (PMID: 34750366).
+        </div>
+
+        <div class="bib-entry">
+            SHEK, Kevin et al. Rate of contamination of hospital privacy curtains on a burns and plastic surgery ward: a cross-sectional study. <strong>Journal of Hospital Infection</strong>, v. 96, n. 1, p. 54-58, 2017. DOI: 10.1016/j.jhin.2017.03.012. (PMID: 28413115).
+        </div>
+
+        <div class="bib-entry">
+            ALMEIDA, Maria Tibiriçá Gonçalves de et al. Papel das superfícies inanimadas na transmissão de infecções relacionadas à assistência à saúde. <strong>Revista de Epidemiologia e Controle de Infecção</strong>, v. 8, n. 2, p. 140-145, 2018. DOI: 10.17058/reci.v8i2.10221.
+        </div>
+
+        <div class="bib-entry">
+            BRASIL. Agência Nacional de Vigilância Sanitária (ANVISA). <strong>Segurança do Paciente em Serviços de Saúde: Higienização das Mãos</strong>. Brasília: Anvisa, 2023. Disponível em: https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/seguranca-do-paciente. Acesso em: 25 jun. 2026.
+        </div>
+
+        <div class="bib-entry">
+            BrCAST. <strong>Tabela de pontos de corte para interpretação de testes de sensibilidade aos antimicrobianos</strong>. Versão atualizada, 2026. Disponível em: http://brcast.org.br/. Acesso em: 25 jun. 2026.
+        </div>
+
+        <div class="bib-entry">
+            WEINBERG, Jane et al. Survival of enterococci and staphylococci on hospital surfaces. <strong>Journal of Clinical Microbiology</strong>, v. 44, n. 2, p. 345-349, 2006. DOI: 10.1128/JCM.44.2.345-349.2006.
+        </div>
+    </div>
+
+    <!-- PÁGINA 15: ANEXOS -->
+    <div class="page-break-before">
+        <h1>15. Anexos</h1>
+
+        <h3>ANEXO A – Modelo de Carta de Anuência Institucional para Pesquisa</h3>
+        <div style="border: 1px solid #000000; padding: 1.5cm; margin-top: 12pt; text-align: justify; font-size: 11pt; line-height: 1.4;" class="no-indent">
+            <div class="center bold" style="margin-bottom: 24pt; text-transform: uppercase;">
+                CARTA DE ANUÊNCIA INSTITUCIONAL
+            </div>
+            
+            Eu, ____________________________________________________, na qualidade de Diretor(a) / Coordenador(a) do Serviço de Controle de Infecção Hospitalar / Direção de Ensino e Pesquisa do Hospital Universitário [ANONIMIZADO], declaro estar ciente dos termos da pesquisa intitulada <strong>"Investigação de Bactérias de Importância Clínica em Superfícies Inanimadas Hospitalares de Contato Indireto como Potenciais Reservatórios Ambientais"</strong>, sob responsabilidade da equipe científica anonimizada cadastrada sob o Edital nº 01/2026 da HU Brasil.
+            <br><br>
+            Declaro que esta instituição autoriza a coleta de dados microbiológicos por meio de swabs friccionados em superfícies inanimadas públicas de uso coletivo (grades de leitos, cortinas de leitos, suportes de soro e painéis de controle de bombas de infusão), em enfermarias sob jurisdição técnica desta administração.
+            <br><br>
+            A autorização é concedida sob a ciência de que:
+            <ol style="margin-left: 0; padding-left: 0.75cm;">
+                <li>Não haverá coleta de materiais biológicos de pacientes, acompanhantes ou profissionais, tampouco acesso a dados identificadores individuais dos mesmos.</li>
+                <li>As atividades serão conduzidas sem interferência com o atendimento assistencial rotineiro ou com as normas de limpeza concorrente e terminal do hospital.</li>
+                <li>Os resultados obtidos serão compartilhados com os setores técnicos competentes do hospital (CCIH e Gerência de Higiene) para fins de vigilância sanitária local e aprimoramento interno das práticas de segurança do paciente.</li>
+            </ol>
+            <br><br>
+            Hospital Universitário [ANONIMIZADO], ____ de ________________ de 2026.
+            <br><br><br>
+            <div class="center">
+                ________________________________________________________<br>
+                Assinatura e carimbo do Responsável Institucional
+            </div>
+        </div>
+
+        <div class="page-break-before">
+            <h3>ANEXO B – Ficha de Coleta de Amostras de Superfícies</h3>
+            <div style="border: 1px solid #000000; padding: 1cm; margin-top: 12pt; font-size: 11pt;" class="no-indent">
+                <div class="center bold" style="margin-bottom: 18pt; text-transform: uppercase;">
+                    FICHA DE REGISTRO E RASTREABILIDADE MICROBIANA
+                </div>
+                
+                <table style="font-size: 11pt; border: none; margin-bottom: 18pt;">
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold">Identificador do Leito (Código):</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;"></td>
+                        <td style="border: none; padding: 4px 0 4px 20px;" class="bold">Enfermaria / Setor:</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;"></td>
+                    </tr>
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold">Data da Coleta:</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;">_____/_____/2026</td>
+                        <td style="border: none; padding: 4px 0 4px 20px;" class="bold">Hora da Coleta:</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;">_____:_____</td>
+                    </tr>
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold" colspan="2">Tempo desde a última higienização (horas):</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;" colspan="2"></td>
+                    </tr>
+                </table>
+
+                <div class="bold" style="margin-bottom: 8pt;">Checklist de Coleta de Amostras (Marcar após acondicionamento no meio Stuart):</div>
+                <table style="font-size: 10pt;">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Cód. Amostra</th>
+                            <th style="width: 25%;">Superfície</th>
+                            <th style="width: 15%;">Efetuada (S/N)</th>
+                            <th style="width: 35%;">Observações físicas / estado da superfície</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="center">CRT-______</td>
+                            <td>Cortina Divisória</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="center">GRD-______</td>
+                            <td>Grade do Leito</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="center">SUP-______</td>
+                            <td>Suporte de Soro</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="center">BOM-______</td>
+                            <td>Painel da Bomba</td>
+                            <td class="center"></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table style="font-size: 11pt; border: none; margin-top: 10pt;">
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold">Coletor Responsável (Rubrica):</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;"></td>
+                    </tr>
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold">Recebimento no Lab (Data/Hora):</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;">_____/_____/2026 &nbsp;&nbsp;&nbsp;&nbsp; _____:_____</td>
+                    </tr>
+                    <tr style="border: none;">
+                        <td style="border: none; padding: 4px 0;" class="bold">Responsável Lab (Assinatura):</td>
+                        <td style="border: none; border-bottom: 1px solid #000; padding: 4px 0;"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
